@@ -7,20 +7,19 @@ public class TileItemSpawn : MonoBehaviour {
     public int prefabSpawn = 0;
     List<Vector3> TakeSpots = new List<Vector3>();
 
-    public GameObject prefab;
-
 	void Start ()
     {
+        PrefabSelector objects = GetComponent<PrefabSelector>();
         for (int i = 0; i < prefabSpawn; i++)
         {
-            float testX = Random.Range(-25 + transform.position.x, 25 + transform.position.x);
+            float testX = Random.Range(-24 + transform.position.x, 24 + transform.position.x);
             int useX = Mathf.RoundToInt(testX);
-            float testZ = Random.Range(-25 + transform.position.z, 25 + transform.position.z);
+            float testZ = Random.Range(-24 + transform.position.z, 24 + transform.position.z);
             int useZ = Mathf.RoundToInt(testZ);
             Vector3 testSpot = new Vector3(useX, 0, useZ);
             if (CheckSpots(testSpot))
             {
-                GameObject addMe = Instantiate(prefab, testSpot, Quaternion.identity) as GameObject;
+                GameObject addMe = Instantiate(objects.givePrefab(), testSpot, Quaternion.identity) as GameObject;
                 addMe.transform.parent = transform;
                 TakeSpots.Add(testSpot);
             }
@@ -34,19 +33,20 @@ public class TileItemSpawn : MonoBehaviour {
 
     bool CheckSpots(Vector3 test)
     {
-        test.x -= 1;
-        test.z -= 1;
-        for (int z = 0; z <= 2; z++)
+        test.x -= 2;
+        test.z -= 2;
+        for (int z = 0; z < 5; z++)
         {
-            test.z += z;
-            for (int x = 0; x <= 2; x++)
+            for (int x = 0; x < 5; x++)
             {
-                test.x += x;
                 if (TakeSpots.Contains(test))
                 {
                     return false;
                 }
+                test.x += 1;
             }
+            test.z += 1;
+            test.x -= 5;
         }
         return true;
     }
