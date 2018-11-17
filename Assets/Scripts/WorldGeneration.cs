@@ -13,6 +13,7 @@ public class WorldGeneration : MonoBehaviour {
     static Vector3 SOUTH =      new Vector3(0, 0, -50);
     static Vector3 SOUTHEAST =  new Vector3(50, 0, -50);
 
+    public bool destroyTiles = true;
     public GameObject[] LoadedTiles = new GameObject[10];
     public List<GameObject> TileList;
     public GameObject baseTile;
@@ -55,9 +56,9 @@ public class WorldGeneration : MonoBehaviour {
             LoadedTiles[3] = spawnTile(LoadedTiles[5].transform.position + NORTHEAST);
             LoadedTiles[6] = spawnTile(LoadedTiles[5].transform.position + EAST);
             LoadedTiles[9] = spawnTile(LoadedTiles[5].transform.position + SOUTHEAST);
-            if (oldTiles[0] != LoadedTiles[0]) Destroy(oldTiles[0]);
-            if (oldTiles[1] != LoadedTiles[0]) Destroy(oldTiles[1]);
-            if (oldTiles[2] != LoadedTiles[0]) Destroy(oldTiles[2]);
+            if (oldTiles[0] != LoadedTiles[0] && destroyTiles) Destroy(oldTiles[0]);
+            if (oldTiles[1] != LoadedTiles[0] && destroyTiles) Destroy(oldTiles[1]);
+            if (oldTiles[2] != LoadedTiles[0] && destroyTiles) Destroy(oldTiles[2]);
         }
         //Player goes west
         if (Player.transform.position.x < LoadedTiles[5].transform.position.x - 25)
@@ -75,9 +76,9 @@ public class WorldGeneration : MonoBehaviour {
             LoadedTiles[1] = spawnTile(LoadedTiles[5].transform.position + NORTHWEST);
             LoadedTiles[4] = spawnTile(LoadedTiles[5].transform.position + WEST);
             LoadedTiles[7] = spawnTile(LoadedTiles[5].transform.position + SOUTHWEST);
-            if (oldTiles[0] != LoadedTiles[0]) Destroy(oldTiles[0]);
-            if (oldTiles[1] != LoadedTiles[0]) Destroy(oldTiles[1]);
-            if (oldTiles[2] != LoadedTiles[0]) Destroy(oldTiles[2]);
+            if (oldTiles[0] != LoadedTiles[0] && destroyTiles) Destroy(oldTiles[0]);
+            if (oldTiles[1] != LoadedTiles[0] && destroyTiles) Destroy(oldTiles[1]);
+            if (oldTiles[2] != LoadedTiles[0] && destroyTiles) Destroy(oldTiles[2]);
         }
         //Player goes north
         if (Player.transform.position.z > LoadedTiles[5].transform.position.z + 25)
@@ -95,9 +96,9 @@ public class WorldGeneration : MonoBehaviour {
             LoadedTiles[1] = spawnTile(LoadedTiles[5].transform.position + NORTHWEST);
             LoadedTiles[2] = spawnTile(LoadedTiles[5].transform.position + NORTH);
             LoadedTiles[3] = spawnTile(LoadedTiles[5].transform.position + NORTHEAST);
-            if (oldTiles[0] != LoadedTiles[0]) Destroy(oldTiles[0]);
-            if (oldTiles[1] != LoadedTiles[0]) Destroy(oldTiles[1]);
-            if (oldTiles[2] != LoadedTiles[0]) Destroy(oldTiles[2]);
+            if (oldTiles[0] != LoadedTiles[0] && destroyTiles) Destroy(oldTiles[0]);
+            if (oldTiles[1] != LoadedTiles[0] && destroyTiles) Destroy(oldTiles[1]);
+            if (oldTiles[2] != LoadedTiles[0] && destroyTiles) Destroy(oldTiles[2]);
         }
         //Player goes south
         if (Player.transform.position.z < LoadedTiles[5].transform.position.z - 25)
@@ -115,15 +116,19 @@ public class WorldGeneration : MonoBehaviour {
             LoadedTiles[7] = spawnTile(LoadedTiles[5].transform.position + SOUTHWEST);
             LoadedTiles[8] = spawnTile(LoadedTiles[5].transform.position + SOUTH);
             LoadedTiles[9] = spawnTile(LoadedTiles[5].transform.position + SOUTHEAST);
-            if (oldTiles[0] != LoadedTiles[0]) Destroy(oldTiles[0]);
-            if (oldTiles[1] != LoadedTiles[0]) Destroy(oldTiles[1]);
-            if (oldTiles[2] != LoadedTiles[0]) Destroy(oldTiles[2]);
+            if (oldTiles[0] != LoadedTiles[0] && destroyTiles) Destroy(oldTiles[0]);
+            if (oldTiles[1] != LoadedTiles[0] && destroyTiles) Destroy(oldTiles[1]);
+            if (oldTiles[2] != LoadedTiles[0] && destroyTiles) Destroy(oldTiles[2]);
         }
     }
 
     GameObject spawnTile(Vector3 spawnPos)
     {
-        Random.InitState((int)((Mathf.PerlinNoise((spawnPos.x - 1000) / 1000, (spawnPos.z - 1000) / 1000)) * 1000));
-        return Instantiate(TileList[Random.Range(0, TileList.Count)], spawnPos, Quaternion.identity);
+        if (spawnPos == Vector3.zero) return LoadedTiles[0];
+        else
+        {
+            Random.InitState((int)((Mathf.PerlinNoise((spawnPos.x - 10000) / 1000, (spawnPos.z - 10000) / 1000)) * (1000 * seed)));
+            return Instantiate(TileList[Random.Range(0, TileList.Count)], spawnPos, Quaternion.identity);
+        }
     }
 }
