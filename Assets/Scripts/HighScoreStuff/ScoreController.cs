@@ -7,15 +7,36 @@ public class ScoreController : MonoBehaviour {
 
     public Text HighScoreDisplay;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        
-	}
+    public void Awake()
+    {
+        if (ScoreManager.LoadScore())
+        {
+            HighScoreDisplay.text = "High Score: " + ScoreManager.HighScore;
+        }
+    }
+
+    public void ResetHighScores()
+    {
+        ScoreManager.HighScore = 0;
+        ScoreManager.SaveScore();
+        if (ScoreManager.LoadScore())
+        {
+            HighScoreDisplay.text = "High Score: " + ScoreManager.HighScore;
+        }
+    }
+
+    public void EnterNewScore(int newScore)
+    {
+        if(newScore >= ScoreManager.HighScore)
+        {
+            ScoreManager.HighScore = newScore;
+            ScoreManager.SaveScore();
+            if (ScoreManager.LoadScore())
+            {
+                HighScoreDisplay.text = "High Score: " + ScoreManager.HighScore;
+            }
+        }
+    }
 
     public void IncrementPress()
     {
