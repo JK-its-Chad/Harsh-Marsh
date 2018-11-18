@@ -14,7 +14,7 @@ public class Enemy : MonoBehaviour {
 
     protected float fireTimer = 2f;
     bool targetPlayer = false;
-    GameObject Player;
+    protected GameObject Player;
 
 	// Use this for initialization
 	protected virtual void Start () {

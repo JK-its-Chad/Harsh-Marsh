@@ -10,6 +10,7 @@ public class Player : MonoBehaviour {
     public int speed = 10;
     public float invulnTime = 2.5f;
 
+    bool dead = false;
     float invulnTimer = 0f;
     int faceDirection = 0; //0=forward 1=45 2=right 3=135 4=back 5=225 6=left 7=315
 
@@ -95,6 +96,7 @@ public class Player : MonoBehaviour {
 
     void die()
     {
+        dead = true;
         Debug.Log("You're dead, act like it");
     }
 }
