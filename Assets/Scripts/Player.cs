@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
 
-    [SerializeField] GameObject model;
     public float score = 0;
     public int health = 100;
     public int speed = 10;
@@ -40,22 +39,22 @@ public class Player : MonoBehaviour {
         if (Input.GetAxis("Vertical") > 0 && faceDirection != 0)
         {
             faceDirection = 0;
-            model.transform.rotation = Quaternion.Euler(0, 0, 0);
+            transform.rotation = Quaternion.Euler(0, 0, 0);
         }
         if (Input.GetAxis("Horizontal") > 0 && faceDirection != 2)
         {
             faceDirection = 2;
-            model.transform.rotation = Quaternion.Euler(0, 90, 0);
+            transform.rotation = Quaternion.Euler(0, 90, 0);
         }
         if (Input.GetAxis("Vertical") < 0 && faceDirection != 4)
         {
             faceDirection = 4;
-            model.transform.rotation = Quaternion.Euler(0, 180, 0);
+            transform.rotation = Quaternion.Euler(0, 180, 0);
         }
         if (Input.GetAxis("Horizontal") < 0 && faceDirection != 6)
         {
             faceDirection = 6;
-            model.transform.rotation = Quaternion.Euler(0, 270, 0);
+            transform.rotation = Quaternion.Euler(0, 270, 0);
         }
     }
     void OffSetFaceDir()
@@ -63,22 +62,22 @@ public class Player : MonoBehaviour {
         if (Input.GetAxis("Vertical") > 0 && Input.GetAxis("Horizontal") > 0 && faceDirection != 1)
         {
             faceDirection = 1;
-            model.transform.rotation = Quaternion.Euler(0, 45, 0);
+            transform.rotation = Quaternion.Euler(0, 45, 0);
         }
         if (Input.GetAxis("Vertical") < 0 && Input.GetAxis("Horizontal") > 0 && faceDirection != 3)
         {
             faceDirection = 3;
-            model.transform.rotation = Quaternion.Euler(0, 135, 0);
+            transform.rotation = Quaternion.Euler(0, 135, 0);
         }
         if (Input.GetAxis("Vertical") < 0 && Input.GetAxis("Horizontal") < 0 && faceDirection != 5)
         {
             faceDirection = 5;
-            model.transform.rotation = Quaternion.Euler(0, 225, 0);
+            transform.rotation = Quaternion.Euler(0, 225, 0);
         }
         if (Input.GetAxis("Vertical") > 0 && Input.GetAxis("Horizontal") < 0 && faceDirection != 7)
         {
             faceDirection = 7;
-            model.transform.rotation = Quaternion.Euler(0, 315, 0);
+            transform.rotation = Quaternion.Euler(0, 315, 0);
         }
     }
 
