@@ -8,6 +8,7 @@ public class Player : MonoBehaviour {
     public int health = 100;
     public int speed = 10;
     public float invulnTime = 2.5f;
+    public BowScript bow;
 
     bool dead = false;
     float invulnTimer = 0f;

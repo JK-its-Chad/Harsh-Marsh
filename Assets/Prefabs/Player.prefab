@@ -218,7 +218,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1814559224236148}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.184351, y: 0, z: 1.8738995}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4792154870874382}
@@ -742,6 +742,7 @@ MonoBehaviour:
   health: 100
   speed: 350
   invulnTime: 2.5
+  bow: {fileID: 114791137801352034}
   faceDirection: 0
 --- !u!136 &136573566056984558
 CapsuleCollider:
