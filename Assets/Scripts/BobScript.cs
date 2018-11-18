@@ -31,11 +31,11 @@ public class BobScript : MonoBehaviour {
         }
         if(transform.position.y > baseSpot.y + .25f)
         {
-            speed *= -1;
+            speed = -2;
         }
         if (transform.position.y < baseSpot.y - .25f)
         {
-            speed *= -1;
+            speed = 2;
         }
         transform.Translate(Vector3.up * speed * Time.deltaTime);
     }
