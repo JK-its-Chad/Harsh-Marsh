@@ -9,33 +9,16 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1462303049363080}
+  m_RootGameObject: {fileID: 1584437668408836}
   m_IsPrefabAsset: 1
---- !u!1 &1117837769633068
+--- !u!1 &1074274250056636
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4708021500533322}
-  - component: {fileID: 33703476668849044}
-  - component: {fileID: 23074014997850406}
-  m_Layer: 0
-  m_Name: LampPlant
-  m_TagString: Enemy
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1398199352208422
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4129185611532390}
+  - component: {fileID: 4221246907742198}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Enemy
@@ -43,16 +26,16 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1462303049363080
+--- !u!1 &1584437668408836
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4759609052869092}
-  - component: {fileID: 114169203702197558}
-  - component: {fileID: 65484392419843174}
+  - component: {fileID: 4783154067476736}
+  - component: {fileID: 114976699322347606}
+  - component: {fileID: 65735420100141158}
   m_Layer: 0
   m_Name: LampPlant
   m_TagString: Enemy
@@ -60,53 +43,71 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4129185611532390
+--- !u!1 &1955086428481690
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4262520724717114}
+  - component: {fileID: 33558264906977968}
+  - component: {fileID: 23381427783543240}
+  - component: {fileID: 65989803977477132}
+  m_Layer: 0
+  m_Name: LampPlant
+  m_TagString: Enemy
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4221246907742198
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1398199352208422}
+  m_GameObject: {fileID: 1074274250056636}
   m_LocalRotation: {x: -0, y: 0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 42.94, z: 0}
   m_LocalScale: {x: 20, y: 20, z: 20}
   m_Children: []
-  m_Father: {fileID: 4759609052869092}
+  m_Father: {fileID: 4783154067476736}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4708021500533322
+--- !u!4 &4262520724717114
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1117837769633068}
+  m_GameObject: {fileID: 1955086428481690}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4759609052869092}
+  m_Father: {fileID: 4783154067476736}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4759609052869092
+--- !u!4 &4783154067476736
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1462303049363080}
+  m_GameObject: {fileID: 1584437668408836}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.172543, y: 0, z: -5.461433}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
   m_Children:
-  - {fileID: 4708021500533322}
-  - {fileID: 4129185611532390}
+  - {fileID: 4262520724717114}
+  - {fileID: 4221246907742198}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23074014997850406
+--- !u!23 &23381427783543240
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1117837769633068}
+  m_GameObject: {fileID: 1955086428481690}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -136,31 +137,43 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33703476668849044
+--- !u!33 &33558264906977968
 MeshFilter:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1117837769633068}
+  m_GameObject: {fileID: 1955086428481690}
   m_Mesh: {fileID: 4300000, guid: 39679932ec136be41b1fcacaf95ce19a, type: 3}
---- !u!65 &65484392419843174
+--- !u!65 &65735420100141158
 BoxCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1462303049363080}
+  m_GameObject: {fileID: 1584437668408836}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 20, y: 36, z: 20}
+  m_Center: {x: 1.5, y: 18, z: 0.5}
+--- !u!65 &65989803977477132
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1955086428481690}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 15, y: 36, z: 15}
   m_Center: {x: 1.5, y: 18, z: 0.5}
---- !u!114 &114169203702197558
+--- !u!114 &114976699322347606
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1462303049363080}
+  m_GameObject: {fileID: 1584437668408836}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5ceab4d67d778614ca6f1b366129fe2f, type: 3}
@@ -174,4 +187,4 @@ MonoBehaviour:
   facePlayer: 0
   followPlayer: 0
   bullet: {fileID: 1408302298602926, guid: 5b53093e98e128549a29069a973de609, type: 2}
-  firePoint: {fileID: 1398199352208422}
+  firePoint: {fileID: 1074274250056636}
