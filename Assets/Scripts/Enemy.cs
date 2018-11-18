@@ -12,7 +12,7 @@ public class Enemy : MonoBehaviour {
     public GameObject bullet;
     public GameObject firePoint;
 
-    float fireTimer = 2f;
+    protected float fireTimer = 2f;
     bool targetPlayer = false;
     GameObject Player;
 

@@ -8,6 +8,9 @@ public class Player : MonoBehaviour {
     public float score = 0;
     public int health = 100;
     public int speed = 10;
+    public float invulnTime = 2.5f;
+
+    float invulnTimer = 0f;
     int faceDirection = 0; //0=forward 1=45 2=right 3=135 4=back 5=225 6=left 7=315
 
     Rigidbody rig;
@@ -20,6 +23,8 @@ public class Player : MonoBehaviour {
     // Update is called once per frame
     void Update ()
     {
+        invulnTimer -= Time.deltaTime;
+
         Vector3 process = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")).normalized;
 
         rig.AddForce(process * speed);
@@ -75,5 +80,21 @@ public class Player : MonoBehaviour {
             faceDirection = 7;
             model.transform.rotation = Quaternion.Euler(0, 315, 0);
         }
+    }
+
+    public void takeDamage(int damage)
+    {
+        if(invulnTimer <= 0)
+        {
+            health -= damage;
+            invulnTimer = invulnTime;
+
+            if (health <= 0) die();
+        }
+    }
+
+    void die()
+    {
+        Debug.Log("You're dead, act like it");
     }
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour {
 
     private Rigidbody rb;
+    public int damage;
     public float lifeTime = 5f;
 	// Use this for initialization
 	void Start ()
@@ -20,4 +21,13 @@ public class Bullet : MonoBehaviour {
         lifeTime -= Time.deltaTime;
         if (lifeTime <= 0) Destroy(gameObject);
 	}
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.name == "Player")
+        {
+            other.gameObject.GetComponent<Player>().takeDamage(damage);        
+        }
+        Destroy(gameObject);
+    }
 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PrefabSelector : MonoBehaviour {
+public class EnemySelector : MonoBehaviour {
 
     public GameObject[] List;
 

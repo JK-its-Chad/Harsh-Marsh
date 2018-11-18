@@ -4,20 +4,13 @@ using UnityEngine;
 
 public class BulletHellEnemy : Enemy {
 
-    protected override void Start()
-    {
-        fireSpeed = 0.01f;
-        base.Start();
-    }
+    public float spinSpeed = 4f;
+    public bool spinBackwards = false;
 
     protected override void Update()
     {
-        transform.Rotate(Vector3.up * 4);
+        if(spinBackwards) transform.Rotate(Vector3.up * -spinSpeed);
+        else transform.Rotate(Vector3.up * spinSpeed);
         base.Update();
-    }
-
-    protected override void fire()
-    {
-        base.fire();
     }
 }
