@@ -97,6 +97,7 @@ public class Player : MonoBehaviour {
 
     void die()
     {
+
         SceneManager.LoadScene("GameOver");
     }
 }

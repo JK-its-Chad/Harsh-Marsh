@@ -1027,7 +1027,7 @@ MonoBehaviour:
   buttons:
   - {fileID: 1702296380}
   Selected: {fileID: 0}
-  selector: {fileID: 0}
+  selector: {fileID: 1867560787}
 --- !u!1 &1702296378
 GameObject:
   m_ObjectHideFlags: 0
