@@ -837,6 +837,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4618892721491994}
+  - component: {fileID: 114512476039673008}
   m_Layer: 0
   m_Name: Spawn Tile
   m_TagString: Untagged
@@ -6322,3 +6323,50 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114512476039673008
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1569324103150340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 850ed5869c54862489281597400a6e97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTiles: 1
+  LoadedTiles:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  TileList:
+  - {fileID: 1318234865838834, guid: 2b720e2970437bd4b991d30c7eb8cb23, type: 2}
+  - {fileID: 1318234865838834, guid: 2b720e2970437bd4b991d30c7eb8cb23, type: 2}
+  - {fileID: 1318234865838834, guid: 2b720e2970437bd4b991d30c7eb8cb23, type: 2}
+  - {fileID: 1318234865838834, guid: 2b720e2970437bd4b991d30c7eb8cb23, type: 2}
+  - {fileID: 1318234865838834, guid: 2b720e2970437bd4b991d30c7eb8cb23, type: 2}
+  - {fileID: 1673276203429048, guid: 6ed495dc948358041913668ac591a071, type: 2}
+  - {fileID: 1673276203429048, guid: 6ed495dc948358041913668ac591a071, type: 2}
+  - {fileID: 1673276203429048, guid: 6ed495dc948358041913668ac591a071, type: 2}
+  - {fileID: 1709450755271132, guid: db72ab7c4480abd4b9910f9e4d22004a, type: 2}
+  - {fileID: 1709450755271132, guid: db72ab7c4480abd4b9910f9e4d22004a, type: 2}
+  - {fileID: 1709450755271132, guid: db72ab7c4480abd4b9910f9e4d22004a, type: 2}
+  - {fileID: 1380490088444180, guid: 055dd373f3b7c7c4ea97b6de1a23c7a8, type: 2}
+  - {fileID: 1380490088444180, guid: 055dd373f3b7c7c4ea97b6de1a23c7a8, type: 2}
+  - {fileID: 1380490088444180, guid: 055dd373f3b7c7c4ea97b6de1a23c7a8, type: 2}
+  - {fileID: 1380490088444180, guid: 055dd373f3b7c7c4ea97b6de1a23c7a8, type: 2}
+  - {fileID: 1380490088444180, guid: 055dd373f3b7c7c4ea97b6de1a23c7a8, type: 2}
+  - {fileID: 1158955115250364, guid: 36010f1bd731ab74a86c259802dd6aca, type: 2}
+  - {fileID: 1158955115250364, guid: 36010f1bd731ab74a86c259802dd6aca, type: 2}
+  - {fileID: 1926621340036142, guid: 1e747c1015525a947b29dd0f715567cd, type: 2}
+  - {fileID: 1584387484245530, guid: 6c70fe484fd3bf848893c351fbf42cd4, type: 2}
+  - {fileID: 1539375414106812, guid: 54b6660d3dbb731428e2d90b5c1c4f87, type: 2}
+  baseTile: {fileID: 0}
+  Player: {fileID: 0}

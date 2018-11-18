@@ -141,10 +141,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   List:
   - {fileID: 1444440859743166, guid: b864c482e36fca64a872392e7de6ae87, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1584437668408836, guid: 5f28c42b752dee644be3efa435658876, type: 2}
+  - {fileID: 1584437668408836, guid: 5f28c42b752dee644be3efa435658876, type: 2}
 --- !u!114 &114923666632628834
 MonoBehaviour:
   m_ObjectHideFlags: 1
