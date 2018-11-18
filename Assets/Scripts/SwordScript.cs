@@ -8,8 +8,10 @@ public class SwordScript : MonoBehaviour {
     public float swingSpeed = 150f;
     public Player player;
     bool swinging = false;
+    float fireRate = 0.2f;
+    float fireTimer = 0f;
     float swingTimer = 0;
-    GameObject[] children = new GameObject[3];
+    GameObject[] children = new GameObject[4];
 
 	void Start ()
     {
@@ -24,8 +26,11 @@ public class SwordScript : MonoBehaviour {
 	
 	void Update ()
     {
-        if (Input.GetButton("Fire1") && !swinging)
+        fireTimer -= Time.deltaTime;
+
+        if (Input.GetButtonDown("Fire1") && !swinging && fireTimer <= 0)
         {
+            fireTimer = fireRate;
             swinging = true;
             foreach (GameObject gm in children)
             {
@@ -36,10 +41,12 @@ public class SwordScript : MonoBehaviour {
         }
         if(swinging)
         {
+            GetComponent<BoxCollider>().enabled = true;
             swingTimer -= Time.deltaTime;
             transform.Rotate(0, swingSpeed * Time.deltaTime, 0);
             if (swingTimer <= 0)
             {
+                GetComponent<BoxCollider>().enabled = false;
                 swinging = false;
                 foreach (GameObject gm in children)
                 {
@@ -47,13 +54,12 @@ public class SwordScript : MonoBehaviour {
                 }
             }
         }
-	}
+    }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Enemy" && swinging)
         {
-            Debug.Log("REEEEEEEEEEEEEEEEEEEEEEEEEE");
             Enemy E = (Enemy)other.gameObject.GetComponent<Enemy>();
             if(E)E.takeDamage(damage);
 
