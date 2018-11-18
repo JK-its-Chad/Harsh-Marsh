@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 4261729384862992}
   - component: {fileID: 114024904390160282}
   - component: {fileID: 114331067818224136}
+  - component: {fileID: 114046224982712954}
   m_Layer: 0
   m_Name: Dense Forest Tile
   m_TagString: Untagged
@@ -139,7 +140,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabSpawn: 300
-  enemySpawn: 0
+  enemySpawn: 13
+--- !u!114 &114046224982712954
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1709450755271132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98e51958310e7494a99dc8133fcd9065, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  List:
+  - {fileID: 1258008152976112, guid: 46002b6f03367124b983750f27a8c0db, type: 2}
+  - {fileID: 1606539207440378, guid: 24168889f51c5054394730bf95891f10, type: 2}
 --- !u!114 &114331067818224136
 MonoBehaviour:
   m_ObjectHideFlags: 1

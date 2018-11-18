@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SlimeEnemy : MonoBehaviour {
+public class SlimeEnemy : Enemy {
 
     public GameObject target;
     bool grounded = true;
@@ -10,14 +10,12 @@ public class SlimeEnemy : MonoBehaviour {
     public int damage = 5;
     public Material deadRed;
 
-    public int health = 100;
     public float jumpHeight = 100;
     public int movementSpeed = 10;
     public int lookSpeed = 2;
     public int slimeValue = 10;
 
     private float ITimer = 0.75f;
-    public bool dead = false;
 
     Rigidbody rig;
 
@@ -25,6 +23,7 @@ public class SlimeEnemy : MonoBehaviour {
     {
         rig = GetComponent<Rigidbody>();
         target = GameObject.Find("Player");
+        base.Start();
 	}
 
 	void FixedUpdate ()
@@ -65,34 +64,20 @@ public class SlimeEnemy : MonoBehaviour {
         ITimer -= Time.deltaTime;
     }
 
-    public bool takeDamage(int damage)
+    public override void takeDamage(int damage)
     {
         if (ITimer <= 0 && !dead)
         {
             health -= damage;
             ITimer = 0.75f;
             if (health <= 0) Die();
-            return true;
         }
-
-        return false;
     }
 
     private void Die()
     {
-        dead = true;
-        gameObject.tag = "Corpse";
-        Transform[] allChildren = GetComponentsInChildren<Transform>();
-        foreach (Transform child in allChildren)
-        {
-            child.gameObject.layer = 11;
-            if (child.gameObject.GetComponent<MeshRenderer>())
-            {
-                child.gameObject.GetComponent<MeshRenderer>().material = deadRed;
-            }
-        }
-        gameObject.layer = 11;
-        rig.freezeRotation = false;
+        Player.GetComponent<Player>().score += pointValue;
+        Destroy(gameObject);
     }
 
     private void OnTriggerStay(Collider other)

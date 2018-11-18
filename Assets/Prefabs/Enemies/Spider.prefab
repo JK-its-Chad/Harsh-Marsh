@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 114328407727962214}
   m_Layer: 0
   m_Name: Spider
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -150,9 +150,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bd55674f87415845999727659fa4a91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
+  pointValue: 10
   viewRange: 20
   moveSpeed: 10
-  fireSpeed: 2
+  fireSpeed: 1.5
   facePlayer: 1
   followPlayer: 0
   bullet: {fileID: 0}

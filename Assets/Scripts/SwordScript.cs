@@ -4,7 +4,13 @@ using UnityEngine;
 
 public class SwordScript : MonoBehaviour {
 
+    public int damage = 25;
+    public float swingSpeed = 150f;
+    public Player player;
+    bool swinging = false;
+    float swingTimer = 0;
     GameObject[] children = new GameObject[3];
+
 	void Start ()
     {
         int i = 0;
@@ -18,14 +24,43 @@ public class SwordScript : MonoBehaviour {
 	
 	void Update ()
     {
-        if (Input.GetButton("Fire1"))
+        if (Input.GetButton("Fire1") && !swinging)
         {
-            transform.rotation = Quaternion.Euler(0, transform.position.y + -90, 0);
+            swinging = true;
             foreach (GameObject gm in children)
             {
                 gm.SetActive(true);
             }
-            transform.Rotate(0, 10 * Time.deltaTime, 0);
+            transform.rotation = Quaternion.Euler(0, (player.faceDirection * 45) - 100, 0);
+            swingTimer = 0.3f;
+        }
+        if(swinging)
+        {
+            swingTimer -= Time.deltaTime;
+            transform.Rotate(0, swingSpeed * Time.deltaTime, 0);
+            if (swingTimer <= 0)
+            {
+                swinging = false;
+                foreach (GameObject gm in children)
+                {
+                    gm.SetActive(false);
+                }
+            }
         }
 	}
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Enemy" && swinging)
+        {
+            Debug.Log("REEEEEEEEEEEEEEEEEEEEEEEEEE");
+            Enemy E = (Enemy)other.gameObject.GetComponent<Enemy>();
+            if(E)E.takeDamage(damage);
+
+            if (other.gameObject.GetComponent<Rigidbody>())
+            {
+                other.gameObject.GetComponent<Rigidbody>().AddForce(transform.forward * 400);
+            }
+        }
+    }
 }

@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4685533483519066}
   - component: {fileID: 114366267604848900}
   - component: {fileID: 114057533261208960}
+  - component: {fileID: 114712905255064548}
   m_Layer: 0
   m_Name: Wetland Tile
   m_TagString: Untagged
@@ -138,7 +139,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dc33c63c2eb5c346847b12dfc2b7198, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isEnemyList: 0
   List:
   - {fileID: 1906936898209606, guid: 1066d0bfbce082741a0944a894b3ae73, type: 2}
   - {fileID: 1110251136962338, guid: af6a6ed40106e9c4eb472c2866f8676e, type: 2}
@@ -154,3 +154,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabSpawn: 300
+  enemySpawn: 20
+--- !u!114 &114712905255064548
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1158955115250364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98e51958310e7494a99dc8133fcd9065, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  List:
+  - {fileID: 1258008152976112, guid: 46002b6f03367124b983750f27a8c0db, type: 2}

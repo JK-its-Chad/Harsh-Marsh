@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 4416940287911408}
   - component: {fileID: 114249348182113548}
   - component: {fileID: 114402010861838694}
+  - component: {fileID: 114681319668968898}
   m_Layer: 0
   m_Name: Rando Tile
   m_TagString: Untagged
@@ -139,6 +140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabSpawn: 300
+  enemySpawn: 4
 --- !u!114 &114402010861838694
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -150,8 +152,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dc33c63c2eb5c346847b12dfc2b7198, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isEnemyList: 0
   List:
   - {fileID: 1112760994390548, guid: 52b5abfc11ebccd42a6c073d35594a82, type: 2}
   - {fileID: 1906936898209606, guid: 1066d0bfbce082741a0944a894b3ae73, type: 2}
   - {fileID: 1110251136962338, guid: af6a6ed40106e9c4eb472c2866f8676e, type: 2}
+--- !u!114 &114681319668968898
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1171122649332640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98e51958310e7494a99dc8133fcd9065, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  List:
+  - {fileID: 1462303049363080, guid: 5f28c42b752dee644be3efa435658876, type: 2}
+  - {fileID: 1597312219672706, guid: f22e67838fc38cf41b0bedbe50b8591a, type: 2}

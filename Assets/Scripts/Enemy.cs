@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour {
 
+    public int health = 100;
+    public int pointValue = 10;
     public float viewRange = 20f;
     public float moveSpeed = 10f;
     public float fireSpeed = 1f;
@@ -12,6 +14,7 @@ public class Enemy : MonoBehaviour {
     public GameObject bullet;
     public GameObject firePoint;
 
+    protected bool dead = false;
     protected float fireTimer = 2f;
     bool targetPlayer = false;
     protected GameObject Player;
@@ -40,5 +43,20 @@ public class Enemy : MonoBehaviour {
     {
         Instantiate(bullet, firePoint.transform.position, transform.rotation);
         fireTimer = fireSpeed;
+    }
+
+    public virtual void takeDamage(int TDamage)
+    {
+        health -= TDamage;
+        if(health <= 0)
+        {
+            die();
+        }
+    }
+
+    void die()
+    {
+        Player.GetComponent<Player>().score += pointValue;
+        Destroy(gameObject);
     }
 }

@@ -11,7 +11,7 @@ public class Player : MonoBehaviour {
 
     bool dead = false;
     float invulnTimer = 0f;
-    int faceDirection = 0; //0=forward 1=45 2=right 3=135 4=back 5=225 6=left 7=315
+    public int faceDirection = 0; //0=forward 1=45 2=right 3=135 4=back 5=225 6=left 7=315
 
     Rigidbody rig;
 

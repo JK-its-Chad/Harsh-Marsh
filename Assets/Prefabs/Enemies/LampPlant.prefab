@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 114169203702197558}
   m_Layer: 0
   m_Name: LampPlant
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -166,7 +166,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ceab4d67d778614ca6f1b366129fe2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewRange: 20
+  health: 100
+  pointValue: 10
+  viewRange: 15
   moveSpeed: 10
   fireSpeed: 3
   facePlayer: 0

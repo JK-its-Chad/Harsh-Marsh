@@ -147,16 +147,26 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   TileList:
-  - {fileID: 1234667670965522, guid: 8bd22ffb9f8768247b0c594621ac5d31, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 1380490088444180, guid: 055dd373f3b7c7c4ea97b6de1a23c7a8, type: 2}
+  - {fileID: 1318234865838834, guid: 2b720e2970437bd4b991d30c7eb8cb23, type: 2}
+  - {fileID: 1318234865838834, guid: 2b720e2970437bd4b991d30c7eb8cb23, type: 2}
+  - {fileID: 1318234865838834, guid: 2b720e2970437bd4b991d30c7eb8cb23, type: 2}
+  - {fileID: 1318234865838834, guid: 2b720e2970437bd4b991d30c7eb8cb23, type: 2}
+  - {fileID: 1318234865838834, guid: 2b720e2970437bd4b991d30c7eb8cb23, type: 2}
+  - {fileID: 1318234865838834, guid: 2b720e2970437bd4b991d30c7eb8cb23, type: 2}
   - {fileID: 1380490088444180, guid: 055dd373f3b7c7c4ea97b6de1a23c7a8, type: 2}
   - {fileID: 1380490088444180, guid: 055dd373f3b7c7c4ea97b6de1a23c7a8, type: 2}
   - {fileID: 1158955115250364, guid: 36010f1bd731ab74a86c259802dd6aca, type: 2}
-  - {fileID: 1171122649332640, guid: d369ead13d372f041aa83be65db3906d, type: 2}
+  - {fileID: 1158955115250364, guid: 36010f1bd731ab74a86c259802dd6aca, type: 2}
+  - {fileID: 1158955115250364, guid: 36010f1bd731ab74a86c259802dd6aca, type: 2}
+  - {fileID: 1380490088444180, guid: 055dd373f3b7c7c4ea97b6de1a23c7a8, type: 2}
+  - {fileID: 1380490088444180, guid: 055dd373f3b7c7c4ea97b6de1a23c7a8, type: 2}
+  - {fileID: 1709450755271132, guid: db72ab7c4480abd4b9910f9e4d22004a, type: 2}
+  - {fileID: 1709450755271132, guid: db72ab7c4480abd4b9910f9e4d22004a, type: 2}
+  - {fileID: 1158955115250364, guid: 36010f1bd731ab74a86c259802dd6aca, type: 2}
+  - {fileID: 1709450755271132, guid: db72ab7c4480abd4b9910f9e4d22004a, type: 2}
+  - {fileID: 1318234865838834, guid: 2b720e2970437bd4b991d30c7eb8cb23, type: 2}
+  - {fileID: 1926621340036142, guid: 1e747c1015525a947b29dd0f715567cd, type: 2}
+  - {fileID: 1584387484245530, guid: 6c70fe484fd3bf848893c351fbf42cd4, type: 2}
   baseTile: {fileID: 1234667670965522, guid: 8bd22ffb9f8768247b0c594621ac5d31, type: 2}
   Player: {fileID: 125611973}
 --- !u!1001 &245397862
@@ -336,6 +346,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f838275f6720854f8110b0227cd5a11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &1229307040
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4910815910746262, guid: 6c70fe484fd3bf848893c351fbf42cd4, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -202.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4910815910746262, guid: 6c70fe484fd3bf848893c351fbf42cd4, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4910815910746262, guid: 6c70fe484fd3bf848893c351fbf42cd4, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -50
+      objectReference: {fileID: 0}
+    - target: {fileID: 4910815910746262, guid: 6c70fe484fd3bf848893c351fbf42cd4, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4910815910746262, guid: 6c70fe484fd3bf848893c351fbf42cd4, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4910815910746262, guid: 6c70fe484fd3bf848893c351fbf42cd4, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4910815910746262, guid: 6c70fe484fd3bf848893c351fbf42cd4, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4910815910746262, guid: 6c70fe484fd3bf848893c351fbf42cd4, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6c70fe484fd3bf848893c351fbf42cd4, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &1385686835
 GameObject:
   m_ObjectHideFlags: 0
