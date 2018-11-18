@@ -454,13 +454,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb154d38781738e488e79b3de181455c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
+  pointValue: 50
+  viewRange: 20
+  moveSpeed: 10
+  fireSpeed: 1
+  facePlayer: 1
+  followPlayer: 1
+  bullet: {fileID: 0}
+  firePoint: {fileID: 0}
   target: {fileID: 0}
   tail: {fileID: 1972472144366424}
   damage: 5
   deadRed: {fileID: 2100000, guid: 6474c5b7c9b9a4f4fae2d5d7cc25be13, type: 2}
-  health: 100
   jumpHeight: 200
   movementSpeed: 50
   lookSpeed: 2
   slimeValue: 10
-  dead: 0

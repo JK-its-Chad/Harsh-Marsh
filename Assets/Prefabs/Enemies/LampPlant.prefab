@@ -21,10 +21,9 @@ GameObject:
   - component: {fileID: 4708021500533322}
   - component: {fileID: 33703476668849044}
   - component: {fileID: 23074014997850406}
-  - component: {fileID: 65471686967726476}
   m_Layer: 0
   m_Name: LampPlant
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39,7 +38,7 @@ GameObject:
   - component: {fileID: 4129185611532390}
   m_Layer: 0
   m_Name: GameObject
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53,6 +52,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4759609052869092}
   - component: {fileID: 114169203702197558}
+  - component: {fileID: 65484392419843174}
   m_Layer: 0
   m_Name: LampPlant
   m_TagString: Enemy
@@ -143,12 +143,12 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1117837769633068}
   m_Mesh: {fileID: 4300000, guid: 39679932ec136be41b1fcacaf95ce19a, type: 3}
---- !u!65 &65471686967726476
+--- !u!65 &65484392419843174
 BoxCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1117837769633068}
+  m_GameObject: {fileID: 1462303049363080}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  pointValue: 10
+  pointValue: 300
   viewRange: 15
   moveSpeed: 10
   fireSpeed: 3
